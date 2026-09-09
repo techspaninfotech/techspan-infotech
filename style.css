@@ -50,7 +50,7 @@ body{background:linear-gradient(180deg,#fbfdff 0%,#f4f9fd 48%,#ffffff 100%)}
 
 /* ---------- Statistics typography refinement ---------- */
 .stats-grid strong{font:800 clamp(3rem,4.2vw,4.5rem)/1 var(--heading);letter-spacing:-.055em;font-variant-numeric:tabular-nums}
-.stats-grid .counter{color:#007da1;text-shadow:0 7px 24px rgba(0,125,161,.15)}
+.stats-grid .counter{display:inline;font:inherit;font-size:inherit!important;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:#007da1;text-shadow:0 7px 24px rgba(0,125,161,.15)}
 .stats-grid>div:not(.stats-message)>span:last-child{margin-top:10px;color:#3f6179;font-size:.88rem;font-weight:650;line-height:1.4;letter-spacing:.01em}
 @media(max-width:1024px){.stats-grid strong{font-size:clamp(2.55rem,5.5vw,3.6rem)}}
 @media(max-width:600px){.stats{padding-block:25px}.stats-grid>div{padding:14px 5px}.stats-grid strong{font-size:clamp(2rem,10vw,2.75rem)}.stats-grid>div:not(.stats-message)>span:last-child{margin-top:7px;font-size:.66rem;line-height:1.35}}

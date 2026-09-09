@@ -48,3 +48,11 @@ body{background:linear-gradient(180deg,#fbfdff 0%,#f4f9fd 48%,#ffffff 100%)}
 @media(max-width:600px){.stats{padding-block:22px}.stats-grid{gap:5px}.stats-grid>div{padding:12px 5px}.stats-grid strong{font-size:1.35rem}.marquee-track span{font-size:.9rem;padding:12px 18px}.marquee-track i{font-size:1.55rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}.marquee-track{animation:none}.cursor-dot,.cursor-ring{display:none}}
 
+/* ---------- Statistics typography refinement ---------- */
+.stats-grid strong{font:800 clamp(3rem,4.2vw,4.5rem)/1 var(--heading);letter-spacing:-.055em;font-variant-numeric:tabular-nums}
+.stats-grid .counter{color:#007da1;text-shadow:0 7px 24px rgba(0,125,161,.15)}
+.stats-grid>div:not(.stats-message)>span:last-child{margin-top:10px;color:#3f6179;font-size:.88rem;font-weight:650;line-height:1.4;letter-spacing:.01em}
+@media(max-width:1024px){.stats-grid strong{font-size:clamp(2.55rem,5.5vw,3.6rem)}}
+@media(max-width:600px){.stats{padding-block:25px}.stats-grid>div{padding:14px 5px}.stats-grid strong{font-size:clamp(2rem,10vw,2.75rem)}.stats-grid>div:not(.stats-message)>span:last-child{margin-top:7px;font-size:.66rem;line-height:1.35}}
+@media(max-width:360px){.stats-grid strong{font-size:1.9rem}.stats-grid>div:not(.stats-message)>span:last-child{font-size:.6rem}}
+

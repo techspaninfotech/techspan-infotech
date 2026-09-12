@@ -72,3 +72,16 @@ In **Settings → Pages**, enter the custom domain and follow GitHub's displayed
 ## Dedicated pages
 
 Header navigation opens `about.html`, `services.html`, `technologies.html`, `why-choose-us.html`, `testimonials.html`, and `contact.html`. The homepage retains the original overview sections. All pages share `style.css` and `script.js` and work directly on GitHub Pages without a router or build step.
+
+## Admin dashboard
+Open https://techspaninfotech.com/admin/ and choose Login with GitHub.
+Authentication uses the Cloudflare Worker; the Client Secret stays in Cloudflare.
+Only the techspaninfotech account is allowed by the deployed Worker.
+Contact, Statistics & Social Links edits content/settings.json.
+Website Content edits shared section JSON files, so homepage and dedicated-page sections stay synchronized.
+Edit text, then Publish. GitHub Pages deployment must finish before the public changes appear.
+Text only is supported: no arbitrary HTML or layout editing. Contact form delivery remains a separate integration.
+GitHub public_repo OAuth permission covers public repositories accessible to the authorized account, not just this repository.
+Do not use admin on an untrusted device; sign out when finished.
+If login hangs, allow popups and use the exact https://techspaninfotech.com/admin/ origin.
+Static HTML is the offline fallback. Newly published CMS text is loaded via content.js.

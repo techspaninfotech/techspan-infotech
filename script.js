@@ -8,7 +8,15 @@
   const backToTop = document.querySelector('.back-to-top');
   const menuToggle = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('.nav-menu');
-  const navLinks = [...document.querySelectorAll('.nav-menu a[href^="#"]')];
+  const navLinks = [...document.querySelectorAll('.nav-menu a')];
+
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  navLinks.forEach(link => {
+    const active = link.getAttribute('href') === currentPage;
+    link.classList.toggle('active', active);
+    if (active) link.setAttribute('aria-current', 'page');
+    else link.removeAttribute('aria-current');
+  });
 
   // Header, scroll progress and mobile navigation.
   const updateScrollUI = () => {
@@ -61,7 +69,7 @@
   const sectionObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
-      navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`));
+      navLinks.filter(link => link.getAttribute('href').startsWith('#')).forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`));
     });
   }, { rootMargin: '-35% 0px -55% 0px' });
   sections.forEach(section => sectionObserver.observe(section));
@@ -88,7 +96,7 @@
   counters.forEach(counter => counterObserver.observe(counter));
 
   // Testimonial slider. Site remains readable if the CDN is unavailable.
-  if (typeof Swiper !== 'undefined') {
+  if (typeof Swiper !== 'undefined' && document.querySelector('.testimonial-slider')) {
     new Swiper('.testimonial-slider', {
       slidesPerView: 1,
       spaceBetween: 18,
@@ -157,6 +165,7 @@
 
   // Local-only validation demo. Connect to a real form provider before launch.
   const form = document.getElementById('contact-form');
+  if (form) {
   form.addEventListener('submit', event => {
     event.preventDefault();
     let valid = true;
@@ -176,6 +185,7 @@
     form.reset();
   });
   form.querySelectorAll('[required]').forEach(field => field.addEventListener('input', () => { field.closest('.field').classList.remove('invalid'); field.closest('.field').querySelector('.error').textContent=''; }));
+  }
   document.getElementById('current-year').textContent = new Date().getFullYear();
 })();
 

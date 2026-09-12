@@ -6,8 +6,8 @@
     "base_url": "https://techspan-admin-auth.techspaninfotech.workers.dev",
     "auth_endpoint": "auth"
   },
-  "site_url": "https://techspaninfotech.com",
-  "display_url": "https://techspaninfotech.com",
+  "site_url": "https://www.techspaninfotech.com",
+  "display_url": "https://www.techspaninfotech.com",
   "media_folder": "assets/uploads",
   "public_folder": "../assets/uploads",
   "collections": [

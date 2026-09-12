@@ -1,0 +1,54 @@
+{
+  "entries": [
+    {
+      "key": "text-1",
+      "label": "H2 · From big idea to lasting impact.",
+      "value": "From big idea to lasting impact."
+    },
+    {
+      "key": "text-2",
+      "label": "P · A clear, collaborative path keeps your project focused and momentum hi",
+      "value": "A clear, collaborative path keeps your project focused and momentum high."
+    },
+    {
+      "key": "text-3",
+      "label": "H3 · Discover",
+      "value": "Discover"
+    },
+    {
+      "key": "text-4",
+      "label": "P · We listen, research and define the opportunity, audience and measures ",
+      "value": "We listen, research and define the opportunity, audience and measures of success."
+    },
+    {
+      "key": "text-5",
+      "label": "H3 · Design",
+      "value": "Design"
+    },
+    {
+      "key": "text-6",
+      "label": "P · We turn strategy into intuitive journeys, visual systems and testable ",
+      "value": "We turn strategy into intuitive journeys, visual systems and testable prototypes."
+    },
+    {
+      "key": "text-7",
+      "label": "H3 · Develop",
+      "value": "Develop"
+    },
+    {
+      "key": "text-8",
+      "label": "P · We engineer a reliable solution with clean code, careful testing and v",
+      "value": "We engineer a reliable solution with clean code, careful testing and visible progress."
+    },
+    {
+      "key": "text-9",
+      "label": "H3 · Launch & Grow",
+      "value": "Launch & Grow"
+    },
+    {
+      "key": "text-10",
+      "label": "P · We launch confidently, learn from results and support your next stage ",
+      "value": "We launch confidently, learn from results and support your next stage of growth."
+    }
+  ]
+}

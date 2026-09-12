@@ -68,3 +68,7 @@ In **Settings → Pages**, enter the custom domain and follow GitHub's displayed
 - Custom cursor, magnetic interactions and 3D tilt only run on fine-pointer desktop devices.
 - CDN assets require an internet connection. If fully offline operation is required, download and self-host the font and library files, then update their references in `index.html`.
 
+
+## Dedicated pages
+
+Header navigation opens `about.html`, `services.html`, `technologies.html`, `why-choose-us.html`, `testimonials.html`, and `contact.html`. The homepage retains the original overview sections. All pages share `style.css` and `script.js` and work directly on GitHub Pages without a router or build step.

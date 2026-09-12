@@ -1,0 +1,14 @@
+{
+  "entries": [
+    {
+      "key": "text-1",
+      "label": "H1 · About Us",
+      "value": "About Us"
+    },
+    {
+      "key": "text-2",
+      "label": "P · People, purpose and technology.",
+      "value": "People, purpose and technology."
+    }
+  ]
+}

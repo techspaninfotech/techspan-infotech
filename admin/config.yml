@@ -1,0 +1,537 @@
+{
+  "backend": {
+    "name": "github",
+    "repo": "techspaninfotech/techspan-infotech",
+    "branch": "main",
+    "base_url": "https://techspan-admin-auth.techspaninfotech.workers.dev",
+    "auth_endpoint": "auth"
+  },
+  "site_url": "https://techspaninfotech.com",
+  "display_url": "https://techspaninfotech.com",
+  "media_folder": "assets/uploads",
+  "public_folder": "../assets/uploads",
+  "collections": [
+    {
+      "name": "settings",
+      "label": "Contact, Statistics & Social Links",
+      "files": [
+        {
+          "name": "settings",
+          "label": "Website Settings",
+          "file": "content/settings.json",
+          "fields": [
+            {
+              "name": "email",
+              "label": "Email",
+              "widget": "string",
+              "required": true
+            },
+            {
+              "name": "phone",
+              "label": "Phone",
+              "widget": "string",
+              "required": true
+            },
+            {
+              "name": "location",
+              "label": "Location",
+              "widget": "string",
+              "required": true
+            },
+            {
+              "name": "projects",
+              "label": "Projects",
+              "widget": "number",
+              "required": true,
+              "value_type": "int",
+              "min": 0,
+              "max": 100000
+            },
+            {
+              "name": "satisfaction",
+              "label": "Satisfaction",
+              "widget": "number",
+              "required": true,
+              "value_type": "int",
+              "min": 0,
+              "max": 100
+            },
+            {
+              "name": "serviceAreas",
+              "label": "Service Areas",
+              "widget": "number",
+              "required": true,
+              "value_type": "int",
+              "min": 0,
+              "max": 100000
+            },
+            {
+              "name": "facebook",
+              "label": "Facebook",
+              "widget": "string",
+              "required": false
+            },
+            {
+              "name": "instagram",
+              "label": "Instagram",
+              "widget": "string",
+              "required": false
+            },
+            {
+              "name": "linkedin",
+              "label": "Linkedin",
+              "widget": "string",
+              "required": false
+            },
+            {
+              "name": "youtube",
+              "label": "Youtube",
+              "widget": "string",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pages",
+      "label": "Website Content",
+      "files": [
+        {
+          "name": "home",
+          "label": "Home",
+          "file": "content/home.json",
+          "fields": [
+            {
+              "name": "entries",
+              "label": "Text blocks",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "collapsed": true,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "key",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "value",
+                  "label": "Text",
+                  "widget": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "services",
+          "label": "Services",
+          "file": "content/services.json",
+          "fields": [
+            {
+              "name": "entries",
+              "label": "Text blocks",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "collapsed": true,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "key",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "value",
+                  "label": "Text",
+                  "widget": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "about",
+          "label": "About",
+          "file": "content/about.json",
+          "fields": [
+            {
+              "name": "entries",
+              "label": "Text blocks",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "collapsed": true,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "key",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "value",
+                  "label": "Text",
+                  "widget": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "process",
+          "label": "Process",
+          "file": "content/process.json",
+          "fields": [
+            {
+              "name": "entries",
+              "label": "Text blocks",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "collapsed": true,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "key",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "value",
+                  "label": "Text",
+                  "widget": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "why-us",
+          "label": "Why us",
+          "file": "content/why-us.json",
+          "fields": [
+            {
+              "name": "entries",
+              "label": "Text blocks",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "collapsed": true,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "key",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "value",
+                  "label": "Text",
+                  "widget": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "technologies",
+          "label": "Technologies",
+          "file": "content/technologies.json",
+          "fields": [
+            {
+              "name": "entries",
+              "label": "Text blocks",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "collapsed": true,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "key",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "value",
+                  "label": "Text",
+                  "widget": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "testimonials",
+          "label": "Testimonials",
+          "file": "content/testimonials.json",
+          "fields": [
+            {
+              "name": "entries",
+              "label": "Text blocks",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "collapsed": true,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "key",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "value",
+                  "label": "Text",
+                  "widget": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "contact",
+          "label": "Contact",
+          "file": "content/contact.json",
+          "fields": [
+            {
+              "name": "entries",
+              "label": "Text blocks",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "collapsed": true,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "key",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "value",
+                  "label": "Text",
+                  "widget": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "page-about",
+          "label": "Page: about",
+          "file": "content/page-about.json",
+          "fields": [
+            {
+              "name": "entries",
+              "label": "Text blocks",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "collapsed": true,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "key",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "value",
+                  "label": "Text",
+                  "widget": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "page-services",
+          "label": "Page: services",
+          "file": "content/page-services.json",
+          "fields": [
+            {
+              "name": "entries",
+              "label": "Text blocks",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "collapsed": true,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "key",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "value",
+                  "label": "Text",
+                  "widget": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "page-technologies",
+          "label": "Page: technologies",
+          "file": "content/page-technologies.json",
+          "fields": [
+            {
+              "name": "entries",
+              "label": "Text blocks",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "collapsed": true,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "key",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "value",
+                  "label": "Text",
+                  "widget": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "page-why-choose-us",
+          "label": "Page: why choose us",
+          "file": "content/page-why-choose-us.json",
+          "fields": [
+            {
+              "name": "entries",
+              "label": "Text blocks",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "collapsed": true,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "key",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "value",
+                  "label": "Text",
+                  "widget": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "page-testimonials",
+          "label": "Page: testimonials",
+          "file": "content/page-testimonials.json",
+          "fields": [
+            {
+              "name": "entries",
+              "label": "Text blocks",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "collapsed": true,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "key",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "value",
+                  "label": "Text",
+                  "widget": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "page-contact",
+          "label": "Page: contact",
+          "file": "content/page-contact.json",
+          "fields": [
+            {
+              "name": "entries",
+              "label": "Text blocks",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "collapsed": true,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "key",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "value",
+                  "label": "Text",
+                  "widget": "text"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

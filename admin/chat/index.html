@@ -8,7 +8,8 @@
   <section class="chat-admin-thread" aria-label="Selected conversation">
    <div class="chat-admin-details" id="guest-details" hidden><div><strong id="guest-name"></strong><small id="guest-contact"></small></div><button class="chat-admin-delete" id="delete-chat" type="button">Delete chat</button></div>
    <div class="chat-admin-messages" id="chat-messages" role="log" aria-live="polite" aria-label="Messages"><p class="chat-empty">Select a conversation to start replying.</p></div>
-   <form class="chat-admin-compose" id="admin-compose" hidden><textarea rows="2" required maxlength="2000" aria-label="Reply to guest" placeholder="Write your reply…"></textarea><button class="chat-primary" type="submit">Send reply</button></form>
+   <div id="guest-typing" class="chat-typing" hidden role="status" aria-live="polite"><span class="chat-typing-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>Guest is typing…</span></div>
+<form class="chat-admin-compose" id="admin-compose" hidden><textarea rows="2" required maxlength="2000" aria-label="Reply to guest" placeholder="Write your reply…"></textarea><button class="chat-primary" type="submit">Send reply</button></form>
   </section>
  </main>
  <script src="../../chat-config.js"></script><script src="../chat-inbox.js"></script>

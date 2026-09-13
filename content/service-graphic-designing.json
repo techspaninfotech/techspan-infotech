@@ -1,0 +1,64 @@
+{
+  "entries": [
+    {
+      "key": "title",
+      "label": "Graphic Designing · Title",
+      "value": "Graphic Designing"
+    },
+    {
+      "key": "tagline",
+      "label": "Graphic Designing · Tagline",
+      "value": "Visual communication that gives your brand a clear voice."
+    },
+    {
+      "key": "overview-title",
+      "label": "Graphic Designing · Overview heading",
+      "value": "A practical approach to graphic designing"
+    },
+    {
+      "key": "intro",
+      "label": "Graphic Designing · Introduction",
+      "value": "We create purposeful visual assets that express your business consistently across digital touchpoints and marketing materials."
+    },
+    {
+      "key": "description",
+      "label": "Graphic Designing · Description",
+      "value": "Our process brings together brand direction, layout, typography and practical production requirements, with feedback rounds aligned to the agreed scope."
+    },
+    {
+      "key": "deliverables-title",
+      "label": "Graphic Designing · Deliverables heading",
+      "value": "What we can help you build"
+    },
+    {
+      "key": "deliverable-0",
+      "label": "Graphic Designing · Deliverable 1",
+      "value": "Brand and creative direction"
+    },
+    {
+      "key": "benefit-0",
+      "label": "Graphic Designing · Benefit 1",
+      "value": "Consistent visual identity"
+    },
+    {
+      "key": "deliverable-1",
+      "label": "Graphic Designing · Deliverable 2",
+      "value": "Marketing and digital design assets"
+    },
+    {
+      "key": "benefit-1",
+      "label": "Graphic Designing · Benefit 2",
+      "value": "Clearer marketing communication"
+    },
+    {
+      "key": "deliverable-2",
+      "label": "Graphic Designing · Deliverable 3",
+      "value": "Production-ready file handover"
+    },
+    {
+      "key": "benefit-2",
+      "label": "Graphic Designing · Benefit 3",
+      "value": "Reusable brand assets"
+    }
+  ]
+}

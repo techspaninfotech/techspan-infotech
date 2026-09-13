@@ -46,6 +46,8 @@
       document.querySelectorAll('a[href^="tel:"]').forEach(a=>{
         if(typeof settings.phone==='string')a.href='tel:'+settings.phone.replace(/[^+0-9]/g,'');
       });
+      document.querySelectorAll('[data-privacy-email]').forEach(a=>{if(typeof settings.email==='string')a.textContent=settings.email;});
+      document.querySelectorAll('[data-privacy-phone]').forEach(a=>{if(typeof settings.phone==='string')a.textContent=settings.phone;});
       ['projects','satisfaction','serviceAreas'].forEach((key,index)=>{
         const counter=document.querySelectorAll('.counter')[index];
         const value=Number(settings[key]);

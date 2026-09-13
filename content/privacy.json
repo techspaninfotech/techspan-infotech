@@ -1,0 +1,54 @@
+{
+  "entries": [
+    {
+      "key": "what-we-collect",
+      "label": "Information we collect",
+      "value": "When you start a chat or submit a project enquiry, we collect your name, mobile number, email address, messages and, for contact forms, your selected service and project details. We also record conversation/message times, unread status and short-lived typing activity. Typing indicators send an activity flag only—not the text of an unsent draft."
+    },
+    {
+      "key": "why-we-use-it",
+      "label": "Why we use your information",
+      "value": "We use this information to respond to your questions, discuss your project, provide support and manage the conversation in our private admin inbox. These forms are not a newsletter or advertising subscription. Required fields and consent must be completed before starting a chat or sending an enquiry; you may contact us by email or phone instead."
+    },
+    {
+      "key": "storage-access",
+      "label": "Storage and access",
+      "value": "Chat and contact-form enquiries are stored in Cloudflare D1 and handled by our Cloudflare chat service. The website administrator can view your contact details and messages and reply through the admin dashboard. Chat enquiries are not written to the public GitHub repository. The website and its public content are hosted through GitHub Pages; admin authentication uses GitHub OAuth and Cloudflare. These providers process information under their own terms and privacy policies."
+    },
+    {
+      "key": "retention",
+      "label": "How long chat information is kept",
+      "value": "The chat service is configured to remove active conversations, contact details and messages after 30 days without a new message, using daily scheduled cleanup. Deletion happens on the cleanup run, not at an exact instant. You can also delete the active conversation yourself or request deletion by contacting us. This describes the active chat database; provider backups/logs and communications sent separately by email or phone may have different retention arrangements."
+    },
+    {
+      "key": "deletion",
+      "label": "Your choices and deletion requests",
+      "value": "In the chatbox, open “Privacy & options” and choose “Delete my chat & details” to permanently remove the active conversation and its messages. If you no longer have access to that chat, contact us to request access, correction or deletion of the information you submitted, or to withdraw consent for further enquiry handling. We may need to verify your identity before acting on a request. Withdrawing consent does not undo processing already carried out."
+    },
+    {
+      "key": "browser-storage",
+      "label": "Browser storage, cookies and activity",
+      "value": "The chatbox stores a random conversation ID and access token in sessionStorage for the current browser tab; it does not store your name, email, mobile number or message history there. The admin inbox similarly keeps a chat-only session token in its tab. Typing activity expires after a short period, and no draft text is sent. The current website code does not configure advertising cookies or an analytics tracker. Hosting, authentication and external resource providers may process technical information such as IP addresses and browser details."
+    },
+    {
+      "key": "external-services",
+      "label": "External resources and links",
+      "value": "Pages load fonts from Google Fonts and visual libraries from third-party CDNs. Loading these resources makes requests to those providers. Links to social networks or other websites take you to services with their own privacy policies. We do not control those external services."
+    },
+    {
+      "key": "security",
+      "label": "Security and responsible use",
+      "value": "The chat service uses HTTPS and access tokens to restrict guest conversations and administrator access. No online service can guarantee absolute security. Please do not send passwords, payment-card details or other sensitive information through the chatbox or contact form. Keep your chat access private when using a shared device."
+    },
+    {
+      "key": "children",
+      "label": "Children’s information",
+      "value": "This website and its enquiry tools are intended for business and professional enquiries, not for children. If you believe a child has submitted personal information, contact us so we can review and remove it where appropriate."
+    },
+    {
+      "key": "updates",
+      "label": "Policy updates",
+      "value": "We may update this policy when our website or data handling changes. The latest version and its updated date will be published on this page."
+    }
+  ]
+}

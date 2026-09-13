@@ -85,3 +85,7 @@ GitHub public_repo OAuth permission covers public repositories accessible to the
 Do not use admin on an untrusted device; sign out when finished.
 If login hangs, allow popups and use the exact https://techspaninfotech.com/admin/ origin.
 Static HTML is the offline fallback. Newly published CMS text is loaded via content.js.
+
+## Guest live chat
+
+A guest chatbox is included on every public page. Required name, mobile number, email and privacy consent are collected before chat begins. Admin inbox: `/admin/chat/`, also linked from the content dashboard. Live operation requires a separate Cloudflare `techspan-chat` Worker, a D1 `CHAT_DB` binding, the supplied schema and a daily retention trigger. See `CHAT-SETUP.md` for activation. Until that backend is deployed, the frontend shows an unavailable notice; it does not pretend to deliver messages. Guest data/messages belong in D1, never in GitHub.

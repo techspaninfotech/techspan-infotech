@@ -809,6 +809,37 @@
               ]
             }
           ]
+        },
+        {
+          "name": "privacy",
+          "label": "Privacy Policy",
+          "file": "content/privacy.json",
+          "fields": [
+            {
+              "name": "entries",
+              "label": "Text blocks",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "collapsed": true,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "key",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "value",
+                  "label": "Text",
+                  "widget": "text"
+                }
+              ]
+            }
+          ]
         }
       ]
     }

@@ -1,0 +1,64 @@
+{
+  "entries": [
+    {
+      "key": "title",
+      "label": "Bulk SMS Solutions · Title",
+      "value": "Bulk SMS Solutions"
+    },
+    {
+      "key": "tagline",
+      "label": "Bulk SMS Solutions · Tagline",
+      "value": "Timely messaging that keeps customers informed."
+    },
+    {
+      "key": "overview-title",
+      "label": "Bulk SMS Solutions · Overview heading",
+      "value": "A practical approach to bulk sms solutions"
+    },
+    {
+      "key": "intro",
+      "label": "Bulk SMS Solutions · Introduction",
+      "value": "We help plan SMS communication for business updates, reminders and customer engagement with an emphasis on relevance and clarity."
+    },
+    {
+      "key": "description",
+      "label": "Bulk SMS Solutions · Description",
+      "value": "We guide messaging setup, templates and campaign workflows. Consent, applicable regulations, sender registration and provider requirements must be addressed before campaigns go live."
+    },
+    {
+      "key": "deliverables-title",
+      "label": "Bulk SMS Solutions · Deliverables heading",
+      "value": "What we can help you build"
+    },
+    {
+      "key": "deliverable-0",
+      "label": "Bulk SMS Solutions · Deliverable 1",
+      "value": "Messaging use-case planning"
+    },
+    {
+      "key": "benefit-0",
+      "label": "Bulk SMS Solutions · Benefit 1",
+      "value": "Timely customer communication"
+    },
+    {
+      "key": "deliverable-1",
+      "label": "Bulk SMS Solutions · Deliverable 2",
+      "value": "Template and provider setup guidance"
+    },
+    {
+      "key": "benefit-1",
+      "label": "Bulk SMS Solutions · Benefit 2",
+      "value": "Reusable messaging workflows"
+    },
+    {
+      "key": "deliverable-2",
+      "label": "Bulk SMS Solutions · Deliverable 3",
+      "value": "Campaign workflow and reporting"
+    },
+    {
+      "key": "benefit-2",
+      "label": "Bulk SMS Solutions · Benefit 3",
+      "value": "Consent-focused campaign planning"
+    }
+  ]
+}

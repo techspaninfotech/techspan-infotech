@@ -1,0 +1,64 @@
+{
+  "entries": [
+    {
+      "key": "title",
+      "label": "Domain & Hosting · Title",
+      "value": "Domain & Hosting"
+    },
+    {
+      "key": "tagline",
+      "label": "Domain & Hosting · Tagline",
+      "value": "A dependable home for your digital presence."
+    },
+    {
+      "key": "overview-title",
+      "label": "Domain & Hosting · Overview heading",
+      "value": "A practical approach to domain & hosting"
+    },
+    {
+      "key": "intro",
+      "label": "Domain & Hosting · Introduction",
+      "value": "We help you choose domains and hosting options that fit your website, expected usage and maintenance needs."
+    },
+    {
+      "key": "description",
+      "label": "Domain & Hosting · Description",
+      "value": "Our guidance covers setup, deployment, HTTPS and operational planning. Provider terms, hosting charges, backups and support responsibilities are clarified as part of the project scope."
+    },
+    {
+      "key": "deliverables-title",
+      "label": "Domain & Hosting · Deliverables heading",
+      "value": "What we can help you build"
+    },
+    {
+      "key": "deliverable-0",
+      "label": "Domain & Hosting · Deliverable 1",
+      "value": "Domain and hosting guidance"
+    },
+    {
+      "key": "benefit-0",
+      "label": "Domain & Hosting · Benefit 1",
+      "value": "A clear hosting setup"
+    },
+    {
+      "key": "deliverable-1",
+      "label": "Domain & Hosting · Deliverable 2",
+      "value": "Deployment and HTTPS setup"
+    },
+    {
+      "key": "benefit-1",
+      "label": "Domain & Hosting · Benefit 2",
+      "value": "Secure connection planning"
+    },
+    {
+      "key": "deliverable-2",
+      "label": "Domain & Hosting · Deliverable 3",
+      "value": "Maintenance and backup planning"
+    },
+    {
+      "key": "benefit-2",
+      "label": "Domain & Hosting · Benefit 3",
+      "value": "Practical operational support"
+    }
+  ]
+}

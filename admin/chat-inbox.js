@@ -4,6 +4,7 @@
  const api=window.TechSpanChat,$=id=>document.getElementById(id);
  let session=null,selected=null,last=0,timer,busy=false,pending=null,previousUnread=0,known=new Set(),initialized=false;
  try{session=JSON.parse(sessionStorage.getItem(api.sessionKey));if(session?.expiresAt<=Date.now()/1000)session=null;}catch{}
+ const typing=api.trackTyping({input:$('admin-compose').querySelector('textarea'),indicator:$('guest-typing'),context:()=>session&&selected?{id:selected,token:session.token,role:'admin'}:null,active:()=>!!session&&!!selected,peer:'guest'});
  const status=text=>{$('chat-status').textContent=text;};
  const save=()=>{try{if(session)sessionStorage.setItem(api.sessionKey,JSON.stringify(session));else sessionStorage.removeItem(api.sessionKey);}catch{}};
  function ui(){const signed=!!session;$('chat-login').hidden=signed;$('chat-logout').hidden=!signed;$('chat-notifications').hidden=!signed||!('Notification' in window);$('chat-inbox').hidden=!signed;}
@@ -26,7 +27,7 @@
   if(data.messages.length)$('chat-messages').scrollTop=$('chat-messages').scrollHeight;
  }
  async function select(id){
-  selected=id;last=0;pending=null;$('admin-compose').querySelector('textarea').value='';$('chat-messages').replaceChildren();$('admin-compose').hidden=false;$('guest-details').hidden=false;
+  typing.stop();selected=id;last=0;pending=null;$('admin-compose').querySelector('textarea').value='';$('chat-messages').replaceChildren();$('admin-compose').hidden=false;$('guest-details').hidden=false;
   document.querySelectorAll('.chat-admin-row').forEach(row=>row.classList.toggle('active',row.dataset.id===id));
   try{await messages();status('');}catch(error){status(error.message);}
  }
@@ -41,7 +42,7 @@
    button.addEventListener('click',()=>select(conversation.id));$('conversation-list').appendChild(button);
   }
   if(!data.conversations.length){const empty=document.createElement('p');empty.textContent='No conversations yet.';$('conversation-list').appendChild(empty);}
-  if(selected&&!data.conversations.some(c=>c.id===selected)){selected=null;last=0;$('guest-details').hidden=true;$('admin-compose').hidden=true;$('chat-messages').textContent='Conversation was deleted or removed by retention cleanup.';}
+  if(selected&&!data.conversations.some(c=>c.id===selected)){typing.stop();selected=null;last=0;$('guest-details').hidden=true;$('admin-compose').hidden=true;$('chat-messages').textContent='Conversation was deleted or removed by retention cleanup.';}
  }
  async function poll(){
   clearTimeout(timer);if(!session)return;
@@ -53,7 +54,7 @@
    else status('Inbox connected · '+data.unread+' unread');
    known=new Set(data.conversations.map(c=>c.id));initialized=true;previousUnread=data.unread;
    $('unread-count').textContent=data.unread?'('+data.unread+')':'';document.title=(data.unread?'('+data.unread+') ':'')+'Live Chat Inbox | TechSpan';list(data);await messages();
-  }catch(error){status(error.message);if(error.status===401){session=null;save();ui();}}
+  }catch(error){status(error.message);if(error.status===401){typing.stop();session=null;save();ui();}}
   finally{busy=false;if(session)timer=setTimeout(poll,5000);}
  }
  $('chat-login').addEventListener('click',()=>{
@@ -79,19 +80,19 @@
   const closed=setInterval(()=>{if(popup.closed&&!finished){finish();status('Login window closed. Try again if not signed in.');}},1000);
  });
  $('chat-logout').addEventListener('click',async()=>{
-  try{if(session)await api.request('/admin/logout',{method:'POST',token:session.token});}catch{}
+  typing.stop();try{if(session)await api.request('/admin/logout',{method:'POST',token:session.token});}catch{}
   session=null;save();selected=null;last=0;clearTimeout(timer);$('chat-messages').replaceChildren();ui();status('Signed out.');
  });
  $('chat-notifications').addEventListener('click',async()=>{const permission=await Notification.requestPermission();status(permission==='granted'?'Notifications enabled while the inbox is open.':'Browser notifications not enabled. Inbox badges still work.');});
  $('admin-compose').addEventListener('submit',async event=>{
   event.preventDefault();if(!selected||!session)return;const input=$('admin-compose').querySelector('textarea'),message=input.value.trim(),id=selected;if(!message||message.length>2000)return;
-  const button=$('admin-compose').querySelector('button');button.disabled=true;
+  typing.stop();const button=$('admin-compose').querySelector('button');button.disabled=true;
   if(!pending||pending.message!==message)pending={message,clientId:crypto.randomUUID()};
   try{await api.request('/admin/'+id+'/messages',{method:'POST',token:session.token,body:pending});if(selected===id){input.value='';pending=null;await messages();}status('Reply sent.');}catch(error){status(error.message);}finally{button.disabled=false;}
  });
  $('delete-chat').addEventListener('click',async()=>{
   if(!selected||!confirm('Permanently delete this guest’s details and all chat messages?'))return;
-  try{await api.request('/admin/'+selected,{method:'DELETE',token:session.token});selected=null;last=0;$('chat-messages').replaceChildren();$('guest-details').hidden=true;$('admin-compose').hidden=true;poll();}catch(error){status(error.message);}
+  typing.stop();try{await api.request('/admin/'+selected,{method:'DELETE',token:session.token});selected=null;last=0;$('chat-messages').replaceChildren();$('guest-details').hidden=true;$('admin-compose').hidden=true;poll();}catch(error){status(error.message);}
  });
  if(session)poll();
 })();

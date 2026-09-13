@@ -54,3 +54,12 @@
 .contact-form .contact-consent{display:flex;align-items:flex-start;gap:10px;font-weight:400;font-size:.72rem;line-height:1.55;color:#587086}
 .contact-form .contact-consent input{width:16px;height:16px;flex:none;margin-top:3px;accent-color:#0077b6}
 .contact-form .form-status.error{color:#a24b25;background:#fff2eb;border-color:#edc9b6}
+
+/* Subtle activity indicator, separate from saved chat messages. */
+.tschat .chat-typing,.chat-admin .chat-typing{display:flex;align-items:center;gap:9px;padding:8px 16px;color:#526b80;font-size:13px;flex-shrink:0}
+.chat-typing-dots{display:inline-flex;gap:4px}
+.chat-typing-dots i{width:5px;height:5px;border-radius:50%;background:#0097a8;animation:chat-typing-pulse 1.2s ease-in-out infinite}
+.chat-typing-dots i:nth-child(2){animation-delay:.15s}
+.chat-typing-dots i:nth-child(3){animation-delay:.3s}
+@keyframes chat-typing-pulse{0%,60%,100%{opacity:.4;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
+@media(prefers-reduced-motion:reduce){.chat-typing-dots i{animation:none}}

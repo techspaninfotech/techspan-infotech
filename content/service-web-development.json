@@ -1,0 +1,64 @@
+{
+  "entries": [
+    {
+      "key": "title",
+      "label": "Web Development · Title",
+      "value": "Web Development"
+    },
+    {
+      "key": "tagline",
+      "label": "Web Development · Tagline",
+      "value": "Fast, accessible websites built for everyday business."
+    },
+    {
+      "key": "overview-title",
+      "label": "Web Development · Overview heading",
+      "value": "A practical approach to web development"
+    },
+    {
+      "key": "intro",
+      "label": "Web Development · Introduction",
+      "value": "We turn designs into responsive websites with clean structure, purposeful interactions and careful attention to performance."
+    },
+    {
+      "key": "description",
+      "label": "Web Development · Description",
+      "value": "We help define the right content approach, integrations and deployment workflow for your project, with testing across the devices your customers use."
+    },
+    {
+      "key": "deliverables-title",
+      "label": "Web Development · Deliverables heading",
+      "value": "What we can help you build"
+    },
+    {
+      "key": "deliverable-0",
+      "label": "Web Development · Deliverable 1",
+      "value": "Responsive frontend implementation"
+    },
+    {
+      "key": "benefit-0",
+      "label": "Web Development · Benefit 1",
+      "value": "Maintainable website foundations"
+    },
+    {
+      "key": "deliverable-1",
+      "label": "Web Development · Deliverable 2",
+      "value": "Forms and integration planning"
+    },
+    {
+      "key": "benefit-1",
+      "label": "Web Development · Benefit 2",
+      "value": "Accessible user interactions"
+    },
+    {
+      "key": "deliverable-2",
+      "label": "Web Development · Deliverable 3",
+      "value": "Performance and browser testing"
+    },
+    {
+      "key": "benefit-2",
+      "label": "Web Development · Benefit 3",
+      "value": "Smooth deployment and handover"
+    }
+  ]
+}

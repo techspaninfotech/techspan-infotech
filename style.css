@@ -63,3 +63,13 @@ body{background:linear-gradient(180deg,#fbfdff 0%,#f4f9fd 48%,#ffffff 100%)}
 .page-intro p{max-width:650px;color:var(--muted);font-size:1.08rem}
 .breadcrumbs{display:flex;gap:10px;font-size:.78rem;color:var(--muted);margin-bottom:28px}.breadcrumbs a{color:var(--blue)}
 @media(max-width:600px){.page-intro{padding:112px 0 40px}.page-intro p{font-size:.95rem}}
+
+/* Service detail pages */
+.service-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.service-detail h2{font-size:clamp(1.8rem,3vw,2.8rem);margin:14px 0 22px}
+.service-detail p{color:var(--muted);margin:0 0 18px}.service-detail .button{margin-top:10px}
+.service-detail-image{margin:0;padding:14px;border:1px solid var(--border);border-radius:25px;background:#fff;box-shadow:var(--shadow)}
+.service-detail-image img{display:block;width:100%;height:auto;border-radius:17px}.service-detail-image figcaption{text-align:center;color:var(--muted);font-size:.72rem;padding:12px 0 2px}
+.service-deliverables{background:var(--bg-soft)}.service-scope-note{text-align:center;margin:25px 0 0;color:var(--muted);font-size:.8rem}
+.page-intro .text-link{display:inline-flex;gap:9px;align-items:center;margin-top:22px}
+@media(max-width:860px){.service-detail-grid{grid-template-columns:1fr;gap:32px}.service-detail-image{max-width:650px;width:100%;margin:auto}}

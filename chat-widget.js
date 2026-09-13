@@ -38,13 +38,15 @@
  async function poll(){
   clearTimeout(timer);if(!session||busy||document.hidden){timer=setTimeout(poll,5000);return;}
   busy=true;
+  const pollSession=session;
   try{
-   const data=await api.request('/guest/'+session.id+'/messages?after='+last,{token:session.token});
+   const data=await api.request('/guest/'+pollSession.id+'/messages?after='+last,{token:pollSession.token});
+   if(session?.id!==pollSession.id)return;
    for(const message of data.messages){if(message.id<=last)continue;append(message);last=message.id;if(panel.hidden&&message.sender==='admin')unread++;}
    if(data.messages.length&&!panel.hidden)messages.scrollTop=messages.scrollHeight;
    setPresence(data.adminOnline,data.adminOnline?'Admin active':'Leave a message — we will reply here');
    updateBadge();notice('');
-  }catch(error){setPresence(false,'Connection interrupted — retrying');notice(error.message);if(error.status===401){session=null;save();renderRoom();}}
+  }catch(error){if(session?.id!==pollSession.id)return;setPresence(false,'Connection interrupted — retrying');notice(error.message);if(error.status===401){session=null;save();renderRoom();}}
   finally{busy=false;timer=setTimeout(poll,panel.hidden?15000:5000);}
  }
  launch.addEventListener('click',()=>{panel.hidden=!panel.hidden;launch.setAttribute('aria-expanded',String(!panel.hidden));if(!panel.hidden){unread=0;updateBadge();if(session)poll();else start.querySelector('input').focus();}});
@@ -68,6 +70,13 @@
  root.querySelector('.tschat-delete').addEventListener('click',async()=>{
   if(!session||!confirm('Delete your chat, contact details and all messages? This cannot be undone.'))return;
   try{await api.request('/guest/'+session.id,{token:session.token,method:'DELETE'});session=null;save();last=0;messages.querySelectorAll('.chat-bubble').forEach(el=>el.remove());renderRoom();clearTimeout(timer);notice('Your chat and details were deleted.');}catch(error){notice(error.message);}
+ });
+ window.addEventListener('techspan:contact-submitted',event=>{
+  const next=event.detail;if(!next?.id||!next?.token)return;
+  session=next;last=0;pending=null;unread=0;save();
+  messages.querySelectorAll('.chat-bubble').forEach(el=>el.remove());
+  root.querySelector('.tschat-privacy').open=false;
+  renderRoom();panel.hidden=false;launch.setAttribute('aria-expanded','true');updateBadge();poll();
  });
  if(session)poll();
 })();

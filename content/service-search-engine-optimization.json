@@ -1,0 +1,64 @@
+{
+  "entries": [
+    {
+      "key": "title",
+      "label": "Search Engine Optimization · Title",
+      "value": "Search Engine Optimization"
+    },
+    {
+      "key": "tagline",
+      "label": "Search Engine Optimization · Tagline",
+      "value": "A stronger search foundation for sustainable visibility."
+    },
+    {
+      "key": "overview-title",
+      "label": "Search Engine Optimization · Overview heading",
+      "value": "A practical approach to search engine optimization"
+    },
+    {
+      "key": "intro",
+      "label": "Search Engine Optimization · Introduction",
+      "value": "We improve the technical and content foundations that help search engines understand your website and visitors find relevant information."
+    },
+    {
+      "key": "description",
+      "label": "Search Engine Optimization · Description",
+      "value": "Our approach combines site audits, on-page improvements and useful content planning. Search results depend on competition and other factors; we do not promise guaranteed rankings."
+    },
+    {
+      "key": "deliverables-title",
+      "label": "Search Engine Optimization · Deliverables heading",
+      "value": "What we can help you build"
+    },
+    {
+      "key": "deliverable-0",
+      "label": "Search Engine Optimization · Deliverable 1",
+      "value": "Technical website audit"
+    },
+    {
+      "key": "benefit-0",
+      "label": "Search Engine Optimization · Benefit 1",
+      "value": "Better-organized website content"
+    },
+    {
+      "key": "deliverable-1",
+      "label": "Search Engine Optimization · Deliverable 2",
+      "value": "On-page and content optimization"
+    },
+    {
+      "key": "benefit-1",
+      "label": "Search Engine Optimization · Benefit 2",
+      "value": "Improved technical discoverability"
+    },
+    {
+      "key": "deliverable-2",
+      "label": "Search Engine Optimization · Deliverable 3",
+      "value": "Search performance monitoring"
+    },
+    {
+      "key": "benefit-2",
+      "label": "Search Engine Optimization · Benefit 3",
+      "value": "A sustainable optimization roadmap"
+    }
+  ]
+}

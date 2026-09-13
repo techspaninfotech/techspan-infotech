@@ -6,64 +6,139 @@
       "value": "Built around partnership, measured by impact."
     },
     {
-      "key": "text-3",
-      "label": "BLOCKQUOTE · “The team translated a complex idea into a digital experience that fee",
-      "value": "“The team translated a complex idea into a digital experience that feels remarkably simple and polished.”"
+      "key": "client-1-quote",
+      "label": "David Miller · Feedback",
+      "value": "Working with Techspan Infotech was an absolute game-changer for our workflow automation tools. Their technical depth and responsiveness made the entire development cycle completely seamless."
     },
     {
-      "key": "text-4",
-      "label": "BLOCKQUOTE · “Communication stayed clear from discovery through launch, and the fin",
-      "value": "“Communication stayed clear from discovery through launch, and the final platform exceeded our expectations.”"
+      "key": "client-1-name",
+      "label": "David Miller · Name",
+      "value": "David Miller"
     },
     {
-      "key": "text-5",
-      "label": "BLOCKQUOTE · “We gained a faster website, a stronger identity and a foundation we c",
-      "value": "“We gained a faster website, a stronger identity and a foundation we can confidently build on.”"
+      "key": "client-1-detail",
+      "label": "David Miller · Role & location",
+      "value": "Operations Lead · Apex Logistics Solutions · USA"
     },
     {
-      "key": "text-6",
-      "label": "BLOCKQUOTE · “A thoughtful, responsive partner who understood both the technology a",
-      "value": "“A thoughtful, responsive partner who understood both the technology and our commercial priorities.”"
+      "key": "client-2-quote",
+      "label": "Elena Rostova · Feedback",
+      "value": "Finding a development partner who truly understands custom application architecture is rare. Techspan Infotech delivered beyond our expectations on time and within budget."
     },
     {
-      "key": "text-7",
-      "label": "Client strong · Aarav Rao",
-      "value": "Aarav Rao"
+      "key": "client-2-name",
+      "label": "Elena Rostova · Name",
+      "value": "Elena Rostova"
     },
     {
-      "key": "text-8",
-      "label": "Client small · Sample Retail Co. · Placeholder",
-      "value": "Sample Retail Co. · Placeholder"
+      "key": "client-2-detail",
+      "label": "Elena Rostova · Role & location",
+      "value": "Product Manager · NovaTech Dynamics · Germany"
     },
     {
-      "key": "text-9",
-      "label": "Client strong · Neha Shah",
-      "value": "Neha Shah"
+      "key": "client-3-quote",
+      "label": "Liam O'Connor · Feedback",
+      "value": "Exceptional service and deep technical expertise. They helped us scale our digital infrastructure without a single hiccup during the transition."
     },
     {
-      "key": "text-10",
-      "label": "Client small · Example Ventures · Placeholder",
-      "value": "Example Ventures · Placeholder"
+      "key": "client-3-name",
+      "label": "Liam O'Connor · Name",
+      "value": "Liam O'Connor"
     },
     {
-      "key": "text-11",
-      "label": "Client strong · Vikram Kumar",
-      "value": "Vikram Kumar"
+      "key": "client-3-detail",
+      "label": "Liam O'Connor · Role & location",
+      "value": "Managing Director · Vanguard Media Group · Australia"
     },
     {
-      "key": "text-12",
-      "label": "Client small · Demo Industries · Placeholder",
-      "value": "Demo Industries · Placeholder"
+      "key": "client-4-quote",
+      "label": "Rajesh Sharma · Feedback",
+      "value": "Techspan Infotech has been a reliable technology partner for our business operations. Their understanding of local compliance and robust software solutions helped streamline our daily management tasks."
     },
     {
-      "key": "text-13",
-      "label": "Client strong · Priya Mehta",
-      "value": "Priya Mehta"
+      "key": "client-4-name",
+      "label": "Rajesh Sharma · Name",
+      "value": "Rajesh Sharma"
     },
     {
-      "key": "text-14",
-      "label": "Client small · Sample Studio · Placeholder",
-      "value": "Sample Studio · Placeholder"
+      "key": "client-4-detail",
+      "label": "Rajesh Sharma · Role & location",
+      "value": "Director · Apex Agro Industries · Nashik"
+    },
+    {
+      "key": "client-5-quote",
+      "label": "Pooja Deshmukh · Feedback",
+      "value": "We needed a clean, scalable digital presence for our retail operations, and Techspan Infotech executed the project brilliantly. Their ongoing support is commendable."
+    },
+    {
+      "key": "client-5-name",
+      "label": "Pooja Deshmukh · Name",
+      "value": "Pooja Deshmukh"
+    },
+    {
+      "key": "client-5-detail",
+      "label": "Pooja Deshmukh · Role & location",
+      "value": "Founder · GreenLeaf Organics · Pune"
+    },
+    {
+      "key": "client-6-quote",
+      "label": "Amit Kulkarni · Feedback",
+      "value": "Professional, prompt, and precise. The team at Techspan Infotech took our vague requirements and turned them into a polished digital product."
+    },
+    {
+      "key": "client-6-name",
+      "label": "Amit Kulkarni · Name",
+      "value": "Amit Kulkarni"
+    },
+    {
+      "key": "client-6-detail",
+      "label": "Amit Kulkarni · Role & location",
+      "value": "Operations Head · Shree Ganesh Enterprises · Mumbai"
+    },
+    {
+      "key": "client-7-quote",
+      "label": "Ananya Sen · Feedback",
+      "value": "As an independent consultant, I needed a customized portfolio and client management tool built from scratch. Techspan Infotech built exactly what I envisioned with great attention to detail."
+    },
+    {
+      "key": "client-7-name",
+      "label": "Ananya Sen · Name",
+      "value": "Ananya Sen"
+    },
+    {
+      "key": "client-7-detail",
+      "label": "Ananya Sen · Role & location",
+      "value": "Independent Brand Strategist · Kolkata"
+    },
+    {
+      "key": "client-8-quote",
+      "label": "Marcus Vance · Feedback",
+      "value": "Working directly with the team as a solo creator was a breeze. They handled the technical complexities so I could focus entirely on my content and clients."
+    },
+    {
+      "key": "client-8-name",
+      "label": "Marcus Vance · Name",
+      "value": "Marcus Vance"
+    },
+    {
+      "key": "client-8-detail",
+      "label": "Marcus Vance · Role & location",
+      "value": "Independent Digital Creator · UK"
+    },
+    {
+      "key": "client-9-quote",
+      "label": "Sneha Joshi · Feedback",
+      "value": "Clean code, great communication, and a very straightforward development process. Highly recommended if you want reliable technical execution for your personal brand."
+    },
+    {
+      "key": "client-9-name",
+      "label": "Sneha Joshi · Name",
+      "value": "Sneha Joshi"
+    },
+    {
+      "key": "client-9-detail",
+      "label": "Sneha Joshi · Role & location",
+      "value": "Independent Financial Advisor · Aurangabad"
     }
   ]
 }

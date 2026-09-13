@@ -530,6 +530,285 @@
               ]
             }
           ]
+        },
+        {
+          "name": "service-website-designing",
+          "label": "Website Designing · Detail page",
+          "file": "content/service-website-designing.json",
+          "fields": [
+            {
+              "name": "entries",
+              "label": "Text blocks",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "collapsed": true,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "key",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "value",
+                  "label": "Text",
+                  "widget": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "service-web-development",
+          "label": "Web Development · Detail page",
+          "file": "content/service-web-development.json",
+          "fields": [
+            {
+              "name": "entries",
+              "label": "Text blocks",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "collapsed": true,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "key",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "value",
+                  "label": "Text",
+                  "widget": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "service-software-development",
+          "label": "Software Development · Detail page",
+          "file": "content/service-software-development.json",
+          "fields": [
+            {
+              "name": "entries",
+              "label": "Text blocks",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "collapsed": true,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "key",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "value",
+                  "label": "Text",
+                  "widget": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "service-mobile-app-development",
+          "label": "Mobile App Development · Detail page",
+          "file": "content/service-mobile-app-development.json",
+          "fields": [
+            {
+              "name": "entries",
+              "label": "Text blocks",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "collapsed": true,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "key",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "value",
+                  "label": "Text",
+                  "widget": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "service-digital-marketing",
+          "label": "Digital Marketing · Detail page",
+          "file": "content/service-digital-marketing.json",
+          "fields": [
+            {
+              "name": "entries",
+              "label": "Text blocks",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "collapsed": true,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "key",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "value",
+                  "label": "Text",
+                  "widget": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "service-search-engine-optimization",
+          "label": "Search Engine Optimization · Detail page",
+          "file": "content/service-search-engine-optimization.json",
+          "fields": [
+            {
+              "name": "entries",
+              "label": "Text blocks",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "collapsed": true,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "key",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "value",
+                  "label": "Text",
+                  "widget": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "service-bulk-sms-solutions",
+          "label": "Bulk SMS Solutions · Detail page",
+          "file": "content/service-bulk-sms-solutions.json",
+          "fields": [
+            {
+              "name": "entries",
+              "label": "Text blocks",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "collapsed": true,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "key",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "value",
+                  "label": "Text",
+                  "widget": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "service-graphic-designing",
+          "label": "Graphic Designing · Detail page",
+          "file": "content/service-graphic-designing.json",
+          "fields": [
+            {
+              "name": "entries",
+              "label": "Text blocks",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "collapsed": true,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "key",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "value",
+                  "label": "Text",
+                  "widget": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "service-domain-hosting",
+          "label": "Domain & Hosting · Detail page",
+          "file": "content/service-domain-hosting.json",
+          "fields": [
+            {
+              "name": "entries",
+              "label": "Text blocks",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "collapsed": true,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "key",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "value",
+                  "label": "Text",
+                  "widget": "text"
+                }
+              ]
+            }
+          ]
         }
       ]
     }

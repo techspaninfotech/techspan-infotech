@@ -163,29 +163,7 @@
     document.addEventListener('visibilitychange',()=>{if(document.hidden)cancelAnimationFrame(animationId);else draw()});
   }
 
-  // Local-only validation demo. Connect to a real form provider before launch.
-  const form = document.getElementById('contact-form');
-  if (form) {
-  form.addEventListener('submit', event => {
-    event.preventDefault();
-    let valid = true;
-    const fields = [...form.querySelectorAll('[required]')];
-    fields.forEach(field => {
-      const wrapper = field.closest('.field');
-      const emailInvalid = field.type === 'email' && !/^\S+@\S+\.\S+$/.test(field.value.trim());
-      const invalid = !field.value.trim() || emailInvalid;
-      wrapper.classList.toggle('invalid', invalid);
-      wrapper.querySelector('.error').textContent = invalid ? (emailInvalid ? 'Please enter a valid email address.' : 'This field is required.') : '';
-      if (invalid) valid = false;
-    });
-    if (!valid) { form.querySelector('.invalid input, .invalid select, .invalid textarea')?.focus(); return; }
-    const status = form.querySelector('.form-status');
-    status.textContent = 'Thanks! This demo form is working locally. Connect a form service before launch to receive submissions.';
-    status.classList.add('show');
-    form.reset();
-  });
-  form.querySelectorAll('[required]').forEach(field => field.addEventListener('input', () => { field.closest('.field').classList.remove('invalid'); field.closest('.field').querySelector('.error').textContent=''; }));
-  }
+  // Live contact form behavior is in contact-form.js.
   document.getElementById('current-year').textContent = new Date().getFullYear();
 })();
 

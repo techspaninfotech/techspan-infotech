@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer"><title>Live Chat Inbox | TechSpan Admin</title><link rel="stylesheet" href="../../chat.css"></head>
+<body class="chat-admin">
+ <header class="chat-admin-header"><h1>TechSpan · Live Chat Inbox <span id="unread-count"></span></h1><nav class="chat-admin-actions" aria-label="Admin navigation"><a href="../">Content editor</a><a href="../../index.html">Website</a><button class="chat-primary" id="chat-login" type="button">Login with GitHub</button><button id="chat-notifications" type="button" hidden>Enable notifications</button><button id="chat-logout" type="button" hidden>Sign out</button></nav></header>
+ <div class="chat-admin-notice"><p>Private guest enquiries · Inbox refreshes every 5 seconds while open. Notifications require this dashboard to remain open.</p><p class="chat-admin-error" id="chat-status" role="status" aria-live="polite">Sign in with your TechSpan GitHub account to view and reply to guests.</p></div>
+ <main class="chat-admin-layout" id="chat-inbox" hidden>
+  <aside class="chat-admin-list" id="conversation-list" aria-label="Guest conversations"></aside>
+  <section class="chat-admin-thread" aria-label="Selected conversation">
+   <div class="chat-admin-details" id="guest-details" hidden><div><strong id="guest-name"></strong><small id="guest-contact"></small></div><button class="chat-admin-delete" id="delete-chat" type="button">Delete chat</button></div>
+   <div class="chat-admin-messages" id="chat-messages" role="log" aria-live="polite" aria-label="Messages"><p class="chat-empty">Select a conversation to start replying.</p></div>
+   <form class="chat-admin-compose" id="admin-compose" hidden><textarea rows="2" required maxlength="2000" aria-label="Reply to guest" placeholder="Write your reply…"></textarea><button class="chat-primary" type="submit">Send reply</button></form>
+  </section>
+ </main>
+ <script src="../../chat-config.js"></script><script src="../chat-inbox.js"></script>
+</body></html>
+

@@ -143,8 +143,3 @@ body{background:linear-gradient(180deg,#fbfdff 0%,#f4f9fd 48%,#ffffff 100%)}
 .marquee-track span:nth-child(4n+2) i{color:#7540bb}.marquee-track span:nth-child(4n+3) i{color:#007c70}.marquee-track span:nth-child(4n+4) i{color:#b94420}
 @media(max-width:600px){.services-grid,.why-grid,.capability-grid{gap:18px}.service-card{min-height:330px;padding:26px 24px 76px}.service-card a{left:24px}.testimonial-card{padding:24px}.testimonial-card blockquote{font-size:.96rem}.testimonial-person small{font-size:.74rem}}
 @media(prefers-reduced-motion:reduce){.service-card:hover,.service-card:focus-within,.why-feature:hover,.capability-card:hover{transform:none}}
-
-/* Warm, subtle header background (no purple tint). */
-.site-header{background:linear-gradient(110deg,rgba(255,253,248,.96),rgba(255,244,233,.94));border-bottom:1px solid rgba(175,126,79,.12)}
-.site-header.scrolled{background:linear-gradient(110deg,rgba(255,253,248,.96),rgba(255,244,233,.94));box-shadow:0 8px 28px rgba(117,85,52,.08)}
-@media(max-width:860px){.nav-menu{background:linear-gradient(145deg,#fffdf8,#fff4e9)}}

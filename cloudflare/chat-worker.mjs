@@ -36,6 +36,24 @@ async function guest(request,db,id){
  const row=await db.prepare('SELECT id FROM conversations WHERE id=? AND token_hash=?').bind(id,await hash(bearer(request))).first();
  if(!row)fail(401,'Chat session unavailable. Start a new chat.');
 }
+
+async function typingStatus(db,id){
+ const rows=await db.prepare('SELECT key,value FROM chat_meta WHERE key IN (?,?)').bind('typing:guest:'+id,'typing:admin:'+id).all();
+ const active=sender=>rows.results.some(row=>row.key==='typing:'+sender+':'+id&&row.value>now()-10);
+ return {guestTyping:active('guest'),adminTyping:active('admin')};
+}
+async function typingRoute(request,db,id,sender){
+ if(!await db.prepare('SELECT id FROM conversations WHERE id=?').bind(id).first())fail(404,'Conversation not found.');
+ if(request.method==='GET')return typingStatus(db,id);
+ if(request.method!=='POST')fail(405,'Method not allowed.');
+ const data=await json(request);if(typeof data.typing!=='boolean')fail(400,'Typing status must be a boolean.');
+ await rate(db,'typing:'+sender+':'+id,45,60);
+ const key='typing:'+sender+':'+id;
+ if(data.typing)await db.prepare('INSERT INTO chat_meta(key,value) VALUES(?,?) ON CONFLICT(key) DO UPDATE SET value=excluded.value').bind(key,now()).run();
+ else await db.prepare('DELETE FROM chat_meta WHERE key=?').bind(key).run();
+ return {updated:true};
+}
+
 async function thread(db,id,after){
  const conversation=await db.prepare('SELECT id,name,email,phone,created_at,last_activity FROM conversations WHERE id=?').bind(id).first();
  if(!conversation)fail(404,'Conversation not found.');
@@ -51,7 +69,8 @@ async function send(request,db,id,sender){
  const t=now();
  await db.batch([
   db.prepare('INSERT OR IGNORE INTO messages(conversation_id,sender,body,created_at,client_id) VALUES(?,?,?,?,?)').bind(id,sender,body,t,data.clientId),
-  db.prepare('UPDATE conversations SET last_activity=? WHERE id=?').bind(t,id)
+  db.prepare('UPDATE conversations SET last_activity=? WHERE id=?').bind(t,id),
+  db.prepare('DELETE FROM chat_meta WHERE key=?').bind('typing:'+sender+':'+id)
  ]);
  return {sent:true};
 }
@@ -61,7 +80,8 @@ async function cleanup(db){
  await db.batch([
   db.prepare('DELETE FROM conversations WHERE last_activity<?').bind(cutoff),
   db.prepare('DELETE FROM admin_sessions WHERE expires_at<?').bind(now()),
-  db.prepare('DELETE FROM rate_limits WHERE expires_at<?').bind(now())
+  db.prepare('DELETE FROM rate_limits WHERE expires_at<?').bind(now()),
+  db.prepare("DELETE FROM chat_meta WHERE key LIKE 'typing:%' AND value<?").bind(now()-10)
  ]);
 }
 export default {
@@ -114,11 +134,13 @@ export default {
      const total=await db.prepare("SELECT COALESCE(SUM(MAX(CASE WHEN c.admin_read_id<0 THEN 1 ELSE 0 END,(SELECT COUNT(*) FROM messages m WHERE m.conversation_id=c.id AND m.sender='guest' AND m.id>c.admin_read_id))),0) count FROM conversations c").first();
      return reply({conversations:result.results,unread:total.count});
     }
+    const typingMatch=url.pathname.match(/^\/admin\/([a-f0-9]{64})\/typing$/);
+    if(typingMatch)return reply(await typingRoute(request,db,typingMatch[1],'admin'));
     const match=url.pathname.match(/^\/admin\/([a-f0-9]{64})(?:\/messages)?$/);
     if(match){
      const id=match[1];
      if(request.method==='DELETE'){
-      await db.prepare('DELETE FROM conversations WHERE id=?').bind(id).run();return reply({deleted:true});
+      await db.batch([db.prepare('DELETE FROM conversations WHERE id=?').bind(id),db.prepare('DELETE FROM chat_meta WHERE key IN (?,?)').bind('typing:guest:'+id,'typing:admin:'+id)]);return reply({deleted:true});
      }
      if(request.method==='GET'){
       const after=Math.max(0,Number(url.searchParams.get('after'))||0),data=await thread(db,id,after);
@@ -128,10 +150,12 @@ export default {
      if(request.method==='POST'){await thread(db,id,0);return reply(await send(request,db,id,'admin'));}
     }
    }
+   const typingMatch=url.pathname.match(/^\/guest\/([a-f0-9]{64})\/typing$/);
+   if(typingMatch){await guest(request,db,typingMatch[1]);return reply(await typingRoute(request,db,typingMatch[1],'guest'));}
    const match=url.pathname.match(/^\/guest\/([a-f0-9]{64})(?:\/messages)?$/);
    if(match){
     const id=match[1];await guest(request,db,id);
-    if(request.method==='DELETE'){await db.prepare('DELETE FROM conversations WHERE id=?').bind(id).run();return reply({deleted:true});}
+    if(request.method==='DELETE'){await db.batch([db.prepare('DELETE FROM conversations WHERE id=?').bind(id),db.prepare('DELETE FROM chat_meta WHERE key IN (?,?)').bind('typing:guest:'+id,'typing:admin:'+id)]);return reply({deleted:true});}
     if(request.method==='GET')return reply(await thread(db,id,Math.max(0,Number(url.searchParams.get('after'))||0)));
     if(request.method==='POST'){await rate(db,'message:'+id,20,60);return reply(await send(request,db,id,'guest'));}
    }

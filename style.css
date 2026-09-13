@@ -73,3 +73,14 @@ body{background:linear-gradient(180deg,#fbfdff 0%,#f4f9fd 48%,#ffffff 100%)}
 .service-deliverables{background:var(--bg-soft)}.service-scope-note{text-align:center;margin:25px 0 0;color:var(--muted);font-size:.8rem}
 .page-intro .text-link{display:inline-flex;gap:9px;align-items:center;margin-top:22px}
 @media(max-width:860px){.service-detail-grid{grid-template-columns:1fr;gap:32px}.service-detail-image{max-width:650px;width:100%;margin:auto}}
+
+/* Readable, responsive privacy policy. */
+.privacy-layout{display:grid;grid-template-columns:250px minmax(0,760px);gap:55px;align-items:start}
+.privacy-nav{position:sticky;top:115px;padding:24px;background:#fff;border:1px solid var(--border);border-radius:18px}
+.privacy-nav h2{font-size:1rem;margin-bottom:14px}.privacy-nav a{display:block;padding:7px 0;font-size:.83rem;color:#35546e}
+.privacy-copy{min-width:0}.privacy-copy section{scroll-margin-top:120px;margin-top:38px}
+.privacy-copy h2{font-size:clamp(1.25rem,2.2vw,1.65rem);line-height:1.4;margin-bottom:12px}
+.privacy-copy p{color:#3f6179;font-size:1rem;line-height:1.85;margin-bottom:16px}
+.privacy-copy a,.contact-consent a,.tschat-consent a,.tschat-privacy-content a{color:#007da1;text-decoration:underline;text-underline-offset:3px}
+.privacy-copy .privacy-updated{font-size:.85rem;color:var(--muted)}
+@media(max-width:860px){.privacy-layout{grid-template-columns:1fr;gap:30px}.privacy-nav{position:static}.privacy-nav nav{display:flex;flex-wrap:wrap;gap:3px 20px}.privacy-nav h2{width:100%}.privacy-copy section{scroll-margin-top:95px}}

@@ -20,3 +20,42 @@ window.TechSpanChat = {
  }
 };
 
+
+/* Only activity flags leave the browser; drafts are never transmitted. */
+window.TechSpanChat.trackTyping = function({input,indicator,context,active,peer}){
+ const api=this;let idle,remoteExpiry,previous=null,lastSent=0,chain=Promise.resolve(),checking=false;
+ const hide=()=>{indicator.hidden=true;clearTimeout(remoteExpiry);};
+ const enqueue=(ctx,typing)=>{
+  const queuedAt=Date.now();
+  chain=chain.catch(()=>{}).then(()=>{if(typing&&(!previous||previous.id!==ctx.id||Date.now()-queuedAt>2200))return;return api.request('/'+ctx.role+'/'+ctx.id+'/typing',{token:ctx.token,method:'POST',body:{typing}});}).catch(()=>{});
+ };
+ const stop=()=>{
+  clearTimeout(idle);
+  if(previous)enqueue(previous,false);
+  previous=null;lastSent=0;hide();
+ };
+ input.addEventListener('input',()=>{
+  const ctx=context();
+  if(!ctx||!active()||!input.value.trim()){stop();return;}
+  if(previous&&(previous.id!==ctx.id||previous.token!==ctx.token))stop();
+  previous=ctx;clearTimeout(idle);
+  if(Date.now()-lastSent>=3000){lastSent=Date.now();enqueue(ctx,true);}
+  idle=setTimeout(stop,2200);
+ });
+ input.addEventListener('blur',stop);
+ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
+ async function check(){
+  const ctx=context();
+  if(!ctx||!active()||document.hidden){hide();return;}
+  if(checking)return;checking=true;
+  try{
+   const data=await api.request('/'+ctx.role+'/'+ctx.id+'/typing',{token:ctx.token});
+   const current=context();
+   if(!current||current.id!==ctx.id||current.token!==ctx.token||!active()||document.hidden)return;
+   indicator.hidden=!data[peer+'Typing'];clearTimeout(remoteExpiry);
+   if(!indicator.hidden)remoteExpiry=setTimeout(hide,10000);
+  }catch{hide();}finally{checking=false;}
+ }
+ setInterval(check,2000);
+ return {stop};
+};

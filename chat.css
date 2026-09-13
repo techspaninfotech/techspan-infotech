@@ -1,0 +1,41 @@
+/* Isolated styles for guest chat and the administration inbox. */
+.tschat,.tschat *,.chat-admin,.chat-admin *{box-sizing:border-box}
+.tschat{font:14px/1.5 Inter,Arial,sans-serif;color:#163c56;position:fixed;right:24px;bottom:80px;z-index:1100}
+.tschat button,.chat-admin button{cursor:pointer;font:inherit}
+.tschat-launch{display:flex;gap:9px;align-items:center;border:0;border-radius:100px;padding:14px 20px;background:linear-gradient(120deg,#0077b6,#008fa6);color:white;box-shadow:0 12px 35px #0077b633;font-weight:700!important}
+.tschat-badge{background:#ff6b35;color:white;border-radius:50px;padding:1px 7px;font-size:12px}
+.tschat-panel{width:min(370px,calc(100vw - 28px));height:min(570px,calc(100dvh - 140px));background:white;border:1px solid #d4e7f2;border-radius:20px;box-shadow:0 20px 80px #082d492b;overflow:hidden;display:flex;flex-direction:column;margin-bottom:12px}
+.tschat [hidden],.chat-admin [hidden]{display:none!important}
+.tschat-head{background:linear-gradient(110deg,#0077b6,#008fa6);color:white;padding:17px 18px;display:flex;align-items:center;justify-content:space-between;flex:none}
+.tschat-head strong{display:block;font-size:16px}.tschat-head small{font-size:11px;opacity:.9}
+.tschat-head button{background:#ffffff22;border:0;color:white;width:30px;height:30px;border-radius:8px;font-size:21px}
+.tschat-start{padding:20px;overflow-y:auto}.tschat-start p{margin:0 0 15px;color:#5b7588;font-size:13px}
+.tschat label{display:block;font-size:12px;font-weight:700;margin:10px 0 5px}
+.tschat input,.tschat textarea,.chat-admin textarea{width:100%;font:inherit;color:#163c56;border:1px solid #cddfea;border-radius:9px;padding:10px;background:#f8fcff}
+.tschat input:focus,.tschat textarea:focus,.chat-admin textarea:focus{outline:2px solid #008fab;outline-offset:1px}
+.tschat-consent{display:flex!important;gap:8px;align-items:start;font-size:11px!important;font-weight:400!important;line-height:1.5}
+.tschat-consent input{width:auto;margin-top:3px;flex:none}.tschat-honey{position:absolute;left:-10000px}
+.tschat-primary,.chat-admin .chat-primary{background:#0077b6;color:white;border:0;border-radius:9px;padding:11px 16px;font-weight:700}
+.tschat-primary{width:100%;margin-top:14px}.tschat button:disabled,.chat-admin button:disabled{opacity:.55;cursor:wait}
+.tschat-status{font-size:12px;color:#935126;padding:0 16px 12px;flex:none}.tschat-status:empty{padding:0}
+.tschat-room{flex:1;min-height:0;display:flex;flex-direction:column}
+.tschat-messages,.chat-admin-messages{flex:1;overflow-y:auto;padding:16px;background:#f0f7fb;min-height:0;display:flex;flex-direction:column;gap:10px}
+.tschat-welcome{color:#57758c;font-size:12px;padding:6px;text-align:center}
+.chat-bubble{max-width:88%;padding:10px 13px;border-radius:13px;background:white;box-shadow:0 3px 12px #082d490a;overflow-wrap:anywhere;white-space:pre-wrap;color:#163c56}
+.chat-bubble.own{align-self:flex-end;background:#0077b6;color:white}.chat-bubble small{display:block;font-size:10px;opacity:.7;margin-top:5px;white-space:normal}
+.tschat-compose,.chat-admin-compose{display:flex;gap:8px;padding:12px;background:white;border-top:1px solid #dae8f0;align-items:center}
+.tschat-compose textarea,.chat-admin-compose textarea{resize:none;min-height:44px}.tschat-compose button{border:0;background:#0077b6;color:white;border-radius:9px;padding:10px}
+.tschat-delete{background:none;border:0;font-size:10px!important;color:#6d8192;padding:6px;text-decoration:underline}
+.chat-admin{margin:0;background:#f1f7fb;color:#14364e;font:14px/1.5 Inter,Arial,sans-serif;min-height:100vh}
+.chat-admin-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:15px;padding:20px 5%;background:white;border-bottom:1px solid #d4e5ef}
+.chat-admin-header h1{font-size:22px;margin:0}.chat-admin-header a{color:#0077b6;text-decoration:none;font-weight:700}.chat-admin-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.chat-admin-notice{margin:18px 5%;padding:13px 18px;border:1px solid #d4e5ef;border-radius:12px;background:white;color:#567186}.chat-admin-error{color:#a24d1e;font-size:13px}
+.chat-admin-layout{display:grid;grid-template-columns:310px 1fr;margin:20px 5%;height:calc(100dvh - 190px);min-height:420px;background:white;border:1px solid #d4e5ef;border-radius:18px;overflow:hidden}
+.chat-admin-list{overflow:auto;border-right:1px solid #d4e5ef;padding:12px}.chat-admin-row{display:block;text-align:left;width:100%;border:1px solid transparent;background:#f4f9fc;padding:13px;border-radius:10px;margin-bottom:8px;color:#14364e}
+.chat-admin-row.active{border-color:#008fab;background:#e5f4fb}.chat-admin-row strong{display:block}.chat-admin-row span{font-size:12px;color:#608096;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.chat-admin-row b{float:right;background:#ff6b35;color:white;border-radius:20px;padding:1px 6px;font-size:11px}
+.chat-admin-thread{display:flex;flex-direction:column;min-height:0;overflow:hidden}.chat-admin-details{padding:15px 20px;border-bottom:1px solid #d4e5ef;display:flex;justify-content:space-between;align-items:center;gap:10px}.chat-admin-details strong{display:block}.chat-admin-details small{display:block;color:#587588;overflow-wrap:anywhere}.chat-admin-delete{background:none;border:1px solid #edc5b8;color:#a24928;border-radius:8px;padding:8px}
+.chat-admin .chat-empty{margin:auto;padding:30px;text-align:center;color:#6a8496}.chat-admin button:focus-visible,.tschat button:focus-visible{outline:3px solid #00a6c9;outline-offset:3px}
+.chat-dashboard-bar{position:fixed;right:18px;bottom:18px;z-index:10000;background:#fff;padding:12px 18px;border:1px solid #cfdfea;border-radius:12px;box-shadow:0 10px 30px #082d4922;display:flex;align-items:center;gap:14px;font:14px Arial,sans-serif;color:#173c57}
+.chat-dashboard-bar a{color:#0077b6;font-weight:bold;text-decoration:none}.chat-dashboard-bar span{font-size:12px}
+@media(max-width:700px){.tschat{right:14px;bottom:76px}.tschat-panel{height:min(560px,calc(100dvh - 125px))}.tschat-launch{padding:11px 15px}.chat-admin-layout{grid-template-columns:1fr;height:auto;min-height:0}.chat-admin-list{max-height:230px;border-right:0;border-bottom:1px solid #d4e5ef}.chat-admin-thread{height:62dvh;min-height:350px}.chat-admin-header{padding:15px}.chat-admin-details{padding:12px}.chat-admin-layout{margin:15px}.chat-admin-notice{margin:15px}.chat-admin-header h1{font-size:19px}.chat-dashboard-bar{flex-wrap:wrap;gap:8px}}
+

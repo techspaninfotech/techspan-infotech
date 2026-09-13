@@ -49,3 +49,8 @@
 .tschat-privacy-content{padding:0 14px 12px;max-height:160px;overflow-y:auto}
 .tschat-privacy-content p{font-size:11px;line-height:1.55;color:#607c8e;margin:0 0 9px}
 .tschat-privacy .tschat-delete{padding:8px 10px;font-size:11px!important;color:#a24928;background:#fff6f1;border:1px solid #f0d1c2;border-radius:8px;text-decoration:none}
+
+/* Contact enquiry consent and live delivery feedback. */
+.contact-form .contact-consent{display:flex;align-items:flex-start;gap:10px;font-weight:400;font-size:.72rem;line-height:1.55;color:#587086}
+.contact-form .contact-consent input{width:16px;height:16px;flex:none;margin-top:3px;accent-color:#0077b6}
+.contact-form .form-status.error{color:#a24b25;background:#fff2eb;border-color:#edc9b6}

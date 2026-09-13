@@ -39,3 +39,13 @@
 .chat-dashboard-bar a{color:#0077b6;font-weight:bold;text-decoration:none}.chat-dashboard-bar span{font-size:12px}
 @media(max-width:700px){.tschat{right:14px;bottom:76px}.tschat-panel{height:min(560px,calc(100dvh - 125px))}.tschat-launch{padding:11px 15px}.chat-admin-layout{grid-template-columns:1fr;height:auto;min-height:0}.chat-admin-list{max-height:230px;border-right:0;border-bottom:1px solid #d4e5ef}.chat-admin-thread{height:62dvh;min-height:350px}.chat-admin-header{padding:15px}.chat-admin-details{padding:12px}.chat-admin-layout{margin:15px}.chat-admin-notice{margin:15px}.chat-admin-header h1{font-size:19px}.chat-dashboard-bar{flex-wrap:wrap;gap:8px}}
 
+
+/* Guest privacy disclosure and live admin presence. */
+.tschat #tschat-presence{display:flex;align-items:center;gap:7px}
+.tschat-online-dot{width:8px;height:8px;flex:none;border-radius:50%;background:#57ed92;box-shadow:0 0 0 3px #57ed922b}
+.tschat-privacy{flex:none;border-top:1px solid #e2edf4;background:#fff}
+.tschat-privacy summary{padding:9px 14px;font-size:11px;font-weight:600;color:#587588;cursor:pointer;list-style-position:inside}
+.tschat-privacy summary:focus-visible{outline:2px solid #008fab;outline-offset:-3px}
+.tschat-privacy-content{padding:0 14px 12px;max-height:160px;overflow-y:auto}
+.tschat-privacy-content p{font-size:11px;line-height:1.55;color:#607c8e;margin:0 0 9px}
+.tschat-privacy .tschat-delete{padding:8px 10px;font-size:11px!important;color:#a24928;background:#fff6f1;border:1px solid #f0d1c2;border-radius:8px;text-decoration:none}

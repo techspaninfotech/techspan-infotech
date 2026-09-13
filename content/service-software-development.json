@@ -1,0 +1,64 @@
+{
+  "entries": [
+    {
+      "key": "title",
+      "label": "Software Development · Title",
+      "value": "Software Development"
+    },
+    {
+      "key": "tagline",
+      "label": "Software Development · Tagline",
+      "value": "Custom software shaped around the way you work."
+    },
+    {
+      "key": "overview-title",
+      "label": "Software Development · Overview heading",
+      "value": "A practical approach to software development"
+    },
+    {
+      "key": "intro",
+      "label": "Software Development · Introduction",
+      "value": "We design and develop business applications that connect workflows, reduce repetitive tasks and bring useful information into one place."
+    },
+    {
+      "key": "description",
+      "label": "Software Development · Description",
+      "value": "Our collaborative approach maps requirements before implementation, then builds in focused milestones with validation, documentation and a practical plan for future improvements."
+    },
+    {
+      "key": "deliverables-title",
+      "label": "Software Development · Deliverables heading",
+      "value": "What we can help you build"
+    },
+    {
+      "key": "deliverable-0",
+      "label": "Software Development · Deliverable 1",
+      "value": "Workflow and requirements mapping"
+    },
+    {
+      "key": "benefit-0",
+      "label": "Software Development · Benefit 1",
+      "value": "Less manual repetition"
+    },
+    {
+      "key": "deliverable-1",
+      "label": "Software Development · Deliverable 2",
+      "value": "Custom application development"
+    },
+    {
+      "key": "benefit-1",
+      "label": "Software Development · Benefit 2",
+      "value": "Better operational visibility"
+    },
+    {
+      "key": "deliverable-2",
+      "label": "Software Development · Deliverable 3",
+      "value": "Testing, documentation and handover"
+    },
+    {
+      "key": "benefit-2",
+      "label": "Software Development · Benefit 3",
+      "value": "Room for future enhancements"
+    }
+  ]
+}

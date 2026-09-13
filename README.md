@@ -47,16 +47,11 @@ Search `index.html` for `placeholder`, `.example`, or the following values:
 
 The testimonials intentionally say **Demo testimonial** and their company names say **Placeholder** so they cannot be mistaken for verified client endorsements.
 
-## Connect a real contact form
+## Live contact forms
 
-The contact form currently validates in the browser and displays a demo confirmation. It does not transmit or store data. To receive submissions on a static GitHub Pages site, connect it to a service such as:
+Contact forms send project enquiries to the existing Cloudflare chat backend and the admin Live Chat Inbox. Name, email, mobile, service, project details and privacy consent are required. After submission, the visitor chatbox opens on the enquiry conversation so the administrator can reply there. Email delivery is not enabled by this integration. The backend must remain deployed and the daily D1 retention trigger enabled.
 
-- [Web3Forms](https://web3forms.com/)
-- [Formspree](https://formspree.io/)
-- [EmailJS](https://www.emailjs.com/)
-- Your own external HTTPS backend
-
-Follow the chosen provider's documentation, add its form endpoint or JavaScript integration, and replace the demo submit handler in `script.js`. Never commit secret API keys to this public repository.
+Forms display success only after the enquiry message is stored. Retry uses the same client identifier to avoid duplicate messages. Guest details and messages are stored in D1, not GitHub.
 
 ## Custom domain and HTTPS
 

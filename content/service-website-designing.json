@@ -1,0 +1,64 @@
+{
+  "entries": [
+    {
+      "key": "title",
+      "label": "Website Designing · Title",
+      "value": "Website Designing"
+    },
+    {
+      "key": "tagline",
+      "label": "Website Designing · Tagline",
+      "value": "Distinctive interfaces that make your brand easy to trust."
+    },
+    {
+      "key": "overview-title",
+      "label": "Website Designing · Overview heading",
+      "value": "A practical approach to website designing"
+    },
+    {
+      "key": "intro",
+      "label": "Website Designing · Introduction",
+      "value": "We translate your brand, audience and business goals into clear page layouts and memorable digital experiences."
+    },
+    {
+      "key": "description",
+      "label": "Website Designing · Description",
+      "value": "From landing pages to corporate websites, our design process focuses on intuitive journeys, readable content and thoughtful interactions that work across screen sizes."
+    },
+    {
+      "key": "deliverables-title",
+      "label": "Website Designing · Deliverables heading",
+      "value": "What we can help you build"
+    },
+    {
+      "key": "deliverable-0",
+      "label": "Website Designing · Deliverable 1",
+      "value": "Discovery and page architecture"
+    },
+    {
+      "key": "benefit-0",
+      "label": "Website Designing · Benefit 1",
+      "value": "Clearer customer journeys"
+    },
+    {
+      "key": "deliverable-1",
+      "label": "Website Designing · Deliverable 2",
+      "value": "Wireframes and interface design"
+    },
+    {
+      "key": "benefit-1",
+      "label": "Website Designing · Benefit 2",
+      "value": "Consistent brand presentation"
+    },
+    {
+      "key": "deliverable-2",
+      "label": "Website Designing · Deliverable 3",
+      "value": "Responsive design system"
+    },
+    {
+      "key": "benefit-2",
+      "label": "Website Designing · Benefit 3",
+      "value": "Mobile-first usability"
+    }
+  ]
+}

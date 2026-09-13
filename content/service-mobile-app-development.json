@@ -1,0 +1,64 @@
+{
+  "entries": [
+    {
+      "key": "title",
+      "label": "Mobile App Development · Title",
+      "value": "Mobile App Development"
+    },
+    {
+      "key": "tagline",
+      "label": "Mobile App Development · Tagline",
+      "value": "Useful mobile experiences, wherever your customers are."
+    },
+    {
+      "key": "overview-title",
+      "label": "Mobile App Development · Overview heading",
+      "value": "A practical approach to mobile app development"
+    },
+    {
+      "key": "intro",
+      "label": "Mobile App Development · Introduction",
+      "value": "We help turn mobile product ideas into intuitive applications with focused features and a clear user experience."
+    },
+    {
+      "key": "description",
+      "label": "Mobile App Development · Description",
+      "value": "From onboarding and navigation to integrations and release planning, we align the application with your audience, platform needs and business priorities."
+    },
+    {
+      "key": "deliverables-title",
+      "label": "Mobile App Development · Deliverables heading",
+      "value": "What we can help you build"
+    },
+    {
+      "key": "deliverable-0",
+      "label": "Mobile App Development · Deliverable 1",
+      "value": "Product journeys and mobile UI"
+    },
+    {
+      "key": "benefit-0",
+      "label": "Mobile App Development · Benefit 1",
+      "value": "Convenient customer access"
+    },
+    {
+      "key": "deliverable-1",
+      "label": "Mobile App Development · Deliverable 2",
+      "value": "Application and integration development"
+    },
+    {
+      "key": "benefit-1",
+      "label": "Mobile App Development · Benefit 2",
+      "value": "Consistent mobile interactions"
+    },
+    {
+      "key": "deliverable-2",
+      "label": "Mobile App Development · Deliverable 3",
+      "value": "Device testing and release preparation"
+    },
+    {
+      "key": "benefit-2",
+      "label": "Mobile App Development · Benefit 3",
+      "value": "A practical product roadmap"
+    }
+  ]
+}

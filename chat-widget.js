@@ -4,7 +4,7 @@
  const api=window.TechSpanChat,key='techspan-guest-chat';if(!api)return;
  const root=document.createElement('div');root.className='tschat';
  root.innerHTML=`<section class="tschat-panel" id="tschat-panel" aria-label="TechSpan live chat" hidden>
- <div class="tschat-head"><div><strong>Chat with TechSpan</strong><small id="tschat-presence">A real conversation with our team</small></div><button type="button" aria-label="Close chat">×</button></div>
+ <div class="tschat-head"><div><strong>Chat with TechSpan</strong><small id="tschat-presence" role="status"><span class="tschat-online-dot" aria-hidden="true" hidden></span><span class="tschat-presence-text">A real conversation with our team</span></small></div><button type="button" aria-label="Close chat">×</button></div>
  <form class="tschat-start"><p>Tell us a little about yourself before we start.</p>
  <label for="tschat-name">Name *</label><input id="tschat-name" name="name" required minlength="2" maxlength="80" autocomplete="name">
  <label for="tschat-phone">Mobile number *</label><input id="tschat-phone" name="phone" type="tel" required minlength="7" maxlength="25" pattern="[+0-9 ()-]{7,25}" autocomplete="tel" placeholder="+91 …">
@@ -13,7 +13,7 @@
  <label class="tschat-consent"><input type="checkbox" name="consent" required><span>I agree to TechSpan storing my contact details and messages in Cloudflare to respond to this enquiry. Chats are removed after 30 days of inactivity when scheduled cleanup is enabled. Do not share passwords, payment details or sensitive information.</span></label>
  <button class="tschat-primary" type="submit">Start conversation →</button></form>
  <div class="tschat-room" hidden><div class="tschat-messages" role="log" aria-live="polite" aria-label="Chat messages"><div class="tschat-welcome">Welcome! Send your question below. Our team will reply here when available.</div></div>
- <form class="tschat-compose"><textarea aria-label="Your message" rows="2" maxlength="2000" required placeholder="Write your message…"></textarea><button type="submit" aria-label="Send message">Send</button></form><button class="tschat-delete" type="button">Delete my chat and details</button></div>
+ <form class="tschat-compose"><textarea aria-label="Your message" rows="2" maxlength="2000" required placeholder="Write your message…"></textarea><button type="submit" aria-label="Send message">Send</button></form><details class="tschat-privacy"><summary>Privacy &amp; options</summary><div class="tschat-privacy-content"><p>Your contact details and messages are stored in Cloudflare to respond to your enquiry. Chats are removed after 30 days of inactivity by daily cleanup. Please do not share passwords or payment details.</p><p>You can delete your chat and details below. This permanently removes the active conversation and its messages.</p><button class="tschat-delete" type="button">Delete my chat &amp; details</button></div></details></div>
  <p class="tschat-status" role="status" aria-live="polite"></p></section>
  <button class="tschat-launch" type="button" aria-expanded="false" aria-controls="tschat-panel">◉ Let's chat <span class="tschat-badge" hidden>0</span></button>`;
  document.body.appendChild(root);
@@ -22,7 +22,14 @@
  try{session=JSON.parse(sessionStorage.getItem(key));if(!session?.id||!session?.token)session=null;}catch{}
  const notice=text=>{status.textContent=text;};
  const save=()=>{try{if(session)sessionStorage.setItem(key,JSON.stringify(session));else sessionStorage.removeItem(key);}catch{}};
- const renderRoom=()=>{start.hidden=!!session;room.hidden=!session;};renderRoom();
+ const setPresence=(online,text)=>{
+  root.querySelector('.tschat-online-dot').hidden=!online;
+  root.querySelector('.tschat-presence-text').textContent=text;
+ };
+ const renderRoom=()=>{
+  start.hidden=!!session;room.hidden=!session;
+  if(!session){root.querySelector('.tschat-privacy').open=false;setPresence(false,'A real conversation with our team');}
+ };renderRoom();
  const updateBadge=()=>{badge.hidden=!unread;badge.textContent=String(unread);};
  function append(message){
   const bubble=document.createElement('div');bubble.className='chat-bubble'+(message.sender==='guest'?' own':'');bubble.textContent=message.body;
@@ -35,9 +42,9 @@
    const data=await api.request('/guest/'+session.id+'/messages?after='+last,{token:session.token});
    for(const message of data.messages){if(message.id<=last)continue;append(message);last=message.id;if(panel.hidden&&message.sender==='admin')unread++;}
    if(data.messages.length&&!panel.hidden)messages.scrollTop=messages.scrollHeight;
-   root.querySelector('#tschat-presence').textContent=data.adminOnline?'Team inbox is active':'Leave a message — we will reply here';
+   setPresence(data.adminOnline,data.adminOnline?'Admin active':'Leave a message — we will reply here');
    updateBadge();notice('');
-  }catch(error){notice(error.message);if(error.status===401){session=null;save();renderRoom();}}
+  }catch(error){setPresence(false,'Connection interrupted — retrying');notice(error.message);if(error.status===401){session=null;save();renderRoom();}}
   finally{busy=false;timer=setTimeout(poll,panel.hidden?15000:5000);}
  }
  launch.addEventListener('click',()=>{panel.hidden=!panel.hidden;launch.setAttribute('aria-expanded',String(!panel.hidden));if(!panel.hidden){unread=0;updateBadge();if(session)poll();else start.querySelector('input').focus();}});

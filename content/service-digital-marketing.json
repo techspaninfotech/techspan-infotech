@@ -1,0 +1,64 @@
+{
+  "entries": [
+    {
+      "key": "title",
+      "label": "Digital Marketing · Title",
+      "value": "Digital Marketing"
+    },
+    {
+      "key": "tagline",
+      "label": "Digital Marketing · Tagline",
+      "value": "Connect with the right audience through purposeful campaigns."
+    },
+    {
+      "key": "overview-title",
+      "label": "Digital Marketing · Overview heading",
+      "value": "A practical approach to digital marketing"
+    },
+    {
+      "key": "intro",
+      "label": "Digital Marketing · Introduction",
+      "value": "We develop digital marketing strategies around your brand, customers and the actions you want people to take."
+    },
+    {
+      "key": "description",
+      "label": "Digital Marketing · Description",
+      "value": "Our work connects campaign messaging, creative content and measurement so that you can understand performance and refine your next steps without relying on guesswork."
+    },
+    {
+      "key": "deliverables-title",
+      "label": "Digital Marketing · Deliverables heading",
+      "value": "What we can help you build"
+    },
+    {
+      "key": "deliverable-0",
+      "label": "Digital Marketing · Deliverable 1",
+      "value": "Audience and campaign planning"
+    },
+    {
+      "key": "benefit-0",
+      "label": "Digital Marketing · Benefit 1",
+      "value": "More consistent brand messaging"
+    },
+    {
+      "key": "deliverable-1",
+      "label": "Digital Marketing · Deliverable 2",
+      "value": "Creative and content coordination"
+    },
+    {
+      "key": "benefit-1",
+      "label": "Digital Marketing · Benefit 2",
+      "value": "Clearer campaign measurement"
+    },
+    {
+      "key": "deliverable-2",
+      "label": "Digital Marketing · Deliverable 3",
+      "value": "Reporting and campaign refinement"
+    },
+    {
+      "key": "benefit-2",
+      "label": "Digital Marketing · Benefit 3",
+      "value": "Focused audience engagement"
+    }
+  ]
+}

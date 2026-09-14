@@ -146,3 +146,10 @@ body{background:linear-gradient(180deg,#fbfdff 0%,#f4f9fd 48%,#ffffff 100%)}
 
 /* Client-confirmed five-star testimonial ratings. */
 .testimonial-card .testimonial-rating{display:flex;gap:5px;color:#b57700;font-size:1.05rem;line-height:1;margin:0 0 20px;flex-shrink:0}
+
+/* Tighter section rhythm on the homepage only. */
+.home-page .section{padding-block:80px}
+.home-page .section-heading{margin-bottom:38px}
+.home-page .center-heading{margin-bottom:38px}
+@media(max-width:860px){.home-page .section{padding-block:64px}}
+@media(max-width:600px){.home-page .section{padding-block:52px}.home-page .section-heading,.home-page .center-heading{margin-bottom:28px}}

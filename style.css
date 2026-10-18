@@ -188,3 +188,30 @@ img.brand-mark{width:54px;height:54px;padding:0;border:0;border-radius:0;backgro
 
 /* Transparent logo asset: preserve its real alpha channel without blending. */
 img.brand-mark{mix-blend-mode:normal;background:transparent;border:0;box-shadow:none}
+
+
+/* One-line header wordmark: larger and more distinctive without affecting the footer. */
+.site-header .brand{gap:12px;flex-shrink:0}
+.site-header .brand .header-brand-name{
+  display:inline-flex;
+  align-items:baseline;
+  gap:.28em;
+  white-space:nowrap;
+  font-family:var(--heading);
+  font-size:1.28rem;
+  font-weight:800;
+  line-height:1;
+  letter-spacing:-.035em;
+  color:var(--navy);
+}
+.site-header .brand .header-brand-name small{
+  font:600 .78em var(--heading);
+  letter-spacing:.06em;
+  text-transform:none;
+  color:var(--cyan-deep);
+}
+@media(max-width:600px){
+  .site-header .brand{gap:8px}
+  .site-header .brand .header-brand-name{font-size:1.02rem;letter-spacing:-.025em}
+  .site-header .brand .header-brand-name small{letter-spacing:.035em}
+}

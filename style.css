@@ -178,3 +178,9 @@ body{background:linear-gradient(180deg,#fbfdff 0%,#f4f9fd 48%,#ffffff 100%)}
 
 /* Supplied TechSpan logo used in header and footer. */
 img.brand-mark{display:block;object-fit:contain;padding:3px;background:#fff}
+
+/* Borderless, larger supplied logo in the site's blue visual system. */
+img.brand-mark{width:54px;height:54px;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;mix-blend-mode:multiply;object-fit:contain}
+.site-header .brand img.brand-mark{width:52px;height:52px}
+.footer .brand img.brand-mark{width:58px;height:58px}
+@media(max-width:600px){.site-header .brand img.brand-mark{width:46px;height:46px}.footer .brand img.brand-mark{width:52px;height:52px}}

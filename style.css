@@ -175,3 +175,6 @@ body{background:linear-gradient(180deg,#fbfdff 0%,#f4f9fd 48%,#ffffff 100%)}
 @media(max-width:860px){.home-page .hero-visual{margin-top:12px}.home-page .hero-visual .badge-one{right:0}.home-page .hero-visual .badge-two{left:0}.home-page .hero-visual .badge-three{right:0}}
 @media(max-width:600px){.home-page .hero-visual{gap:20px;padding-block:8px}.hero-tech-tiles{gap:8px}.hero-tech-tiles>span{flex:1;min-width:0;padding:10px 5px;font-size:.65rem;border-radius:12px}.hero-tech-tiles i{font-size:1.45rem}.hero-build-strip{padding:13px 8px}.hero-build-strip li{gap:6px}.hero-build-strip li:not(:last-child):after{right:-17px;font-size:.8rem}.hero-build-strip small{font-size:.7rem}.hero-build-strip i{width:29px;height:29px}.home-page .hero-visual .floating-badge{display:none}}
 @media(prefers-reduced-motion:reduce){.hero-tech-tiles>span{animation:none}}
+
+/* Supplied TechSpan logo used in header and footer. */
+img.brand-mark{display:block;object-fit:contain;padding:3px;background:#fff}

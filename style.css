@@ -215,3 +215,25 @@ img.brand-mark{mix-blend-mode:normal;background:transparent;border:0;box-shadow:
   .site-header .brand .header-brand-name{font-size:1.02rem;letter-spacing:-.025em}
   .site-header .brand .header-brand-name small{letter-spacing:.035em}
 }
+
+
+/* Unified logo-matched, tall and bold header wordmark. */
+.site-header .brand .header-brand-name{
+  gap:.22em;
+  font-family:"Barlow Condensed",var(--heading);
+  font-size:1.58rem;
+  font-weight:800;
+  line-height:.9;
+  letter-spacing:.015em;
+  color:#0077b6;
+}
+.site-header .brand .header-brand-name small{
+  font:inherit;
+  letter-spacing:inherit;
+  text-transform:none;
+  color:inherit;
+}
+@media(max-width:600px){
+  .site-header .brand .header-brand-name{font-size:1.26rem;letter-spacing:.01em}
+  .site-header .brand .header-brand-name small{font:inherit;letter-spacing:inherit}
+}

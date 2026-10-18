@@ -184,3 +184,7 @@ img.brand-mark{width:54px;height:54px;padding:0;border:0;border-radius:0;backgro
 .site-header .brand img.brand-mark{width:52px;height:52px}
 .footer .brand img.brand-mark{width:58px;height:58px}
 @media(max-width:600px){.site-header .brand img.brand-mark{width:46px;height:46px}.footer .brand img.brand-mark{width:52px;height:52px}}
+
+
+/* Transparent logo asset: preserve its real alpha channel without blending. */
+img.brand-mark{mix-blend-mode:normal;background:transparent;border:0;box-shadow:none}

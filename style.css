@@ -237,3 +237,24 @@ img.brand-mark{mix-blend-mode:normal;background:transparent;border:0;box-shadow:
   .site-header .brand .header-brand-name{font-size:1.26rem;letter-spacing:.01em}
   .site-header .brand .header-brand-name small{font:inherit;letter-spacing:inherit}
 }
+
+
+/* Final header wordmark: original Poppins look with equal-sized words. */
+.site-header .brand .header-brand-name{
+  gap:.24em;
+  font-family:var(--heading);
+  font-size:1.42rem;
+  font-weight:800;
+  line-height:1;
+  letter-spacing:-.025em;
+  color:#0077b6;
+}
+.site-header .brand .header-brand-name small{
+  font:inherit;
+  letter-spacing:inherit;
+  color:inherit;
+}
+@media(max-width:600px){
+  .site-header .brand .header-brand-name{font-size:1.12rem;letter-spacing:-.02em}
+  .site-header .brand .header-brand-name small{font:inherit;letter-spacing:inherit}
+}
